@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="space-y-8">
+    <!-- Header -->
+    <div class="text-center">
+        <img src="{{ resume.avatar }}" alt="{{ resume.name }}" class="w-32 h-32 rounded-full mx-auto mb-4">
+        <h1 class="text-4xl font-bold text-gray-900">{{ resume.name }}</h1>
+        <p class="text-xl text-gray-600 mt-2">{{ resume.title }}</p>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="mailto:{{ resume.contact.email }}" class="text-blue-600 hover:text-blue-800">Email</a>
+            <a href="{{ resume.contact.linkedin }}" target="_blank" class="text-blue-600 hover:text-blue-800">LinkedIn</a>
+            <a href="{{ resume.contact.github }}" target="_blank" class="text-blue-600 hover:text-blue-800">GitHub</a>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">About</h2>
+        <p class="text-gray-700">{{ resume.summary }}</p>
+    </div>
+
+    <!-- Experience -->
+    <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Experience</h2>
+        <div class="space-y-6">
+            {% for exp in resume.experience %}
+            <div class="border-l-4 border-blue-500 pl-4">
+                <h3 class="text-lg font-semibold text-gray-900">{{ exp.title }}</h3>
+                <p class="text-blue-600">{{ exp.company }} • {{ exp.period }}</p>
+                <p class="text-gray-700 mt-2">{{ exp.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Skills</h2>
+        <div class="flex flex-wrap gap-2">
+            {% for skill in resume.skills %}
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Projects</h2>
+        <div class="space-y-4">
+            {% for project in resume.projects %}
+            <div class="border rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                    <a href="{{ project.link }}" target="_blank" class="hover:text-blue-600">{{ project.title }}</a>
+                </h3>
+                <p class="text-gray-700 mt-1">{{ project.description }}</p>
+                <div class="flex flex-wrap gap-1 mt-2">
+                    {% for tech in project.tech %}
+                    <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Education</h2>
+        <div class="space-y-4">
+            {% for edu in resume.education %}
+            <div class="border-l-4 border-green-500 pl-4">
+                <h3 class="text-lg font-semibold text-gray-900">{{ edu.degree }}</h3>
+                <p class="text-green-600">{{ edu.institution }} • {{ edu.period }}</p>
+                <p class="text-gray-700 mt-2">{{ edu.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

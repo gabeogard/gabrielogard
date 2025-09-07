@@ -1,0 +1,63 @@
+{
+  "name": "Gabriel Ogard",
+  "title": "Software Developer",
+  "avatar": "https://media.licdn.com/dms/image/v2/D4D03AQHjwm4xSMJLWg/profile-displayphoto-crop_800_800/B4DZeZXhIhGYAI-/0/1750624769523?e=1757548800&v=beta&t=kjf6Z2uezgTvWdwl1bM6wmW5QoWRP3L4zUN0jpDuCf0",
+  "summary": "Builder. Software Developer. Originally from Norway, based in Vienna, Austria. Currently working as a Software Engineer for Paysafe. I work across the stack, but I tend to prefer working on the back-end.",
+  "contact": {
+    "email": "gabrielogard@hotmail.com",
+    "linkedin": "https://linkedin.com/in/gabriel-ogard",
+    "github": "https://github.com/gabeogard"
+  },
+  "skills": [
+    "Java",
+    "Kafka",
+    "Kotlin",
+    "Go",
+    "Angular",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "AWS",
+    "Docker",
+    "GraphQL",
+    "Tailwind CSS",
+    "PostgreSQL",
+    "Linux"
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Paysafe",
+      "period": "2023 - Present",
+      "description": "As a key member of the development team at Paysafe, I contributed to several high-impact initiatives. I played an integral role in developing and integrating a custom marketing automation platform that created significant efficiency gains and cost savings for the marketing department. Additionally, I collaborated on enhancing the paysafecard distributor management system and the company's gift card shop, helping to optimize operational workflows, improve user engagement, and boost sales performance."
+    },
+    {
+      "title": "Software Engineer (Internship)",
+      "company": "Milient",
+      "period": "2017 - 2020",
+      "description": "Crafted and implemented a user-friendly customer portal for Milient's project management SaaS product, as a key project during my software engineering internship, while concurrently conducting research and analysis for my bachelor's thesis focusing on the portal's features and impact."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelors - Information Technology",
+      "institution": "Kristiania University of Applied Sciences",
+      "period": "2020 - 2023",
+      "description": "Studied a diverse range of software development areas, including frontend, backend, and embedded systems, as part of the Information Technology program. Acquired a solid foundation in coding languages and technologies."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Portfolio Website (This one right here)",
+      "description": "A personal site built with Next.js and Tailwind.",
+      "tech": ["Next.js", "React", "Tailwind", "ShadCN"],
+      "link": "https://www.gabrielogard.com"
+    },
+    {
+      "title": "Paysafe Gift Card Shop",
+      "description": "One of the projects I've worked on professionally. Gift cards for various merchants.",
+      "tech": ["Java", "Angular", "Oracle PL/SQL"],
+      "link": "https://www.paysafecard.com/de-at/gutscheinshop/"
+    }
+  ]
+}

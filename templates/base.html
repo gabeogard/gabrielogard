@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }} - Gabriel Ogard</title>
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+  <nav class="bg-white shadow-sm border-b">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex space-x-8">
+          <a href="/" hx-get="/" hx-target="#content" hx-push-url="true"
+            class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 border-b-2 border-transparent hover:border-gray-300">
+            Home
+          </a>
+          <a href="/blog" hx-get="/blog" hx-target="#content" hx-push-url="true"
+            class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700">
+            Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="content" class="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    {% block content %}{% endblock content %}
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="bg-white rounded-lg shadow p-8">
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-2">{{ post.title }}</h1>
+    <p class="text-gray-600">{{ post.date }}</p>
+  </header>
+
+  <div class="prose max-w-none">
+    {{ post.content | safe }}
+  </div>
+
+  <div class="mt-8 pt-8 border-t">
+    <a href="/blog" hx-get="/blog" hx-target="#content" hx-push-url="true" class="text-blue-600 hover:text-blue-800">
+      ← Back to Blog
+    </a>
+  </div>
+</article>
+{% endblock content %}
